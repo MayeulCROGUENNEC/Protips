@@ -220,8 +220,46 @@ var item = window.localStorage.getItem("itemName")
 
 ```js
 window.scroll({
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth' 
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
 });
 ```
+
+
+
+
+
+
+
+## Quelques rappels sur le switch
+
+if / else permet d’introduire de la logique dans notre code en créant des branches : en fonction d’une condition, nous exécuterons telle ou telle opération. Mais parfois, il y a plus de 2 branches possibles.
+
+Le réflexe initial consiste donc à ajouter des branches avec else if :
+
+```js
+
+if( name === "patrick" ) {
+  sayHello();
+} else if( name === "jane" ) {
+  giveSomeNews();
+} else {
+  sayBye(); // don't talk to strangers!
+}
+Comme c’est un petit peu verbeux, peu lisible et encore moins élégant, on utilise alors le switch :
+
+switch( name ) {
+case "patrick":
+  sayHello();
+  break;
+
+case "jane":
+  giveSomeNews();
+  break;
+
+default:
+  sayBye(); // don't talk to strangers!
+  break;
+}
+switch est une alternative classique à un enchaînement de else if.
